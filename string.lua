@@ -33,6 +33,11 @@ print(tostring(10) == "10")     --> true
 print(10 .. "" == "10")         --> true
 print("" .. 10 == 10)           --> false
 
+-- gfind was replaced by gmatch in Lua 5.2
+for s in string.gmatch("a=b c=d", "[^%s+]=[^%s+]") do
+    print(s)                    --> a=b --> c=d
+end
+
 line = io.read()    -- read a line
 n = tonumber(line)
 if n == nil then
