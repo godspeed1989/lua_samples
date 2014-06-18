@@ -21,8 +21,8 @@ co = coroutine.create(function ()
 end)
 
 coroutine.resume(co)            --> co  1
-coroutine.resume(co)            --> co  1
-coroutine.resume(co)            --> co  1
+coroutine.resume(co)            --> co  2
+coroutine.resume(co)            --> co  3
 coroutine.resume(co)            --> (nothing)
 -- resume() returns false plus an error message
 status, err = coroutine.resume(co)
