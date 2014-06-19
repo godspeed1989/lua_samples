@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS = -Wall -I../include
-LIBS = -L../lib -llua
+CFLAGS = -Wall -I../../include
+LIBS = -L../../lib -llua
 TARGET = c_call_lua
 
 all: $(TARGET)

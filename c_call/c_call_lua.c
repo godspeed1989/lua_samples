@@ -9,10 +9,7 @@ lua_State* load_lua_src (const char *filename)
     {
         luaL_error(L, "bad alloc lua state\n");
     }
-    luaopen_base(L);
-    luaopen_io(L);
-    luaopen_string(L);
-    luaopen_math(L);
+    /* opens all standard Lua libraries */
     luaL_openlibs(L);
     if (luaL_loadfile(L, filename) ||
         lua_pcall(L, 0, 0, 0))
